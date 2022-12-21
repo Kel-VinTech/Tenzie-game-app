@@ -69,8 +69,9 @@ const diceElements = dice.map(die => <Die value={die.value}
       <main>
         <h1 className='title'>Tenzies</h1>
         <p className='instructions'>
-          Roll untill all dice are the same. Click each die 
-          to freeze it at it's current value between rolls
+          {tenzies? 
+          `Congratulations you have won!!. Click the New Game button to restart the game.`:
+          `Roll until all dice are the same. Click each die to freeze it at it's current value between rolls.`}
         </p>
         <div className="dice_container">
           {diceElements}
